@@ -2,7 +2,7 @@
 
 ## Live Demo
 
-🔗 [Live Application](YOUR_VERCEL_LINK)
+🔗 [Live Application](https://fintrack-kartik.vercel.app/)
 
 ---
 
