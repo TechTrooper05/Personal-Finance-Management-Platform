@@ -94,13 +94,13 @@ FinTrack is a React-based Personal Finance Management Platform designed to help 
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/TechTrooper05/fintrack.git
+git clone https://github.com/TechTrooper05/Personal-Finance-Management-Platform.git
 ```
 
 ### Navigate to the Project Directory
 
 ```bash
-cd fintrack
+cd Personal-Finance-Management-Platform-main
 ```
 
 ### Install Dependencies
