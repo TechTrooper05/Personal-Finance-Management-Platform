@@ -50,10 +50,15 @@ function SpendingAnalytics({transactions}) {
     }).reduce((sum, transaction)=>{
             return sum+=Number(transaction.amount);
     },0)/(currentMonth+1);
-    const topCategory = Object.entries(categoryData).reduce((max, current)=>current[1]>max[1]?current:max);
-    console.log(topCategory);
+    const topCategory = Object.entries(categoryData).reduce(
+        (max, current) => current[1] > max[1] ? current : max,
+        ["No Data", 0]
+    );
     const [topCategoryItem, topCategoryExpense] = topCategory;
-    const topCategoryShare = (topCategoryExpense/currentMonthExpense)*100;
+    const topCategoryShare =
+        currentMonthExpense > 0
+            ? (topCategoryExpense / currentMonthExpense) * 100
+            : 0;
     return (
     <>
     <div className="analytics-heading">
