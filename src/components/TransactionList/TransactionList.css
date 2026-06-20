@@ -1,0 +1,79 @@
+.transaction-list-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.transaction-list-type {
+    display: flex;
+    align-items: center;
+    margin-left: 4.3vw;
+    width: 15vw;
+    height: auto;
+    font-size: 3.5vh;
+    overflow-wrap: break-word;
+}
+.transaction-list-category {
+    display: flex;
+    align-items: center;
+    margin-left: 2vw;
+    width: 20vw;
+    height: auto;
+    font-size: 3.5vh;
+    overflow-wrap: break-word;
+}
+.transaction-list-amount {
+    display: flex;
+    align-items: center;
+    width: 15vw;
+    height: auto;
+    margin-left: 2vw;
+    font-size: 3.5vh;
+    overflow-wrap: break-word;
+}
+.transaction-list-date {
+    display: flex;
+    align-items: center;
+    width: 15vw;
+    height: auto;
+    margin-left: 2vw;
+    font-size: 3.5vh;
+    overflow-wrap: break-word;
+}
+.delete-transaction-list-button {
+    display: flex;
+    align-items: center;
+    height: auto;
+    border: none;
+    color: red;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 3.92vh;
+    transition: transform 0.2s ease;
+}
+.transaction-description {
+    display: flex;
+    align-items: center;
+    width: 80vw;
+    height: 5vh;
+    font-size: 3.5vh;
+    margin-left: 4.3vw;
+    font-weight: bold;
+}
+.details {
+    width: 90%;
+    height: 12vh;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 0px 18px rgba(115, 92, 221, 0.7);
+    margin-top: 2vh;
+    border-radius: 2vh;
+    /* background-color: #D1F5BE; */
+}
+.details:hover {
+    transform: translateY(-0.75vh);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    /* background-color: rgb(246, 246, 151); */
+}
+.delete-transaction-list-button:hover {
+    transform: scale(1.4); 
+}

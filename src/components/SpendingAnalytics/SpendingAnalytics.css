@@ -1,0 +1,72 @@
+.line-graph-container {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8vh;
+    /* background-color: rgb(253, 253, 176); */
+    transition: transform 1s ease;
+}
+.inner-line-graph-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 75%;
+}
+.monthly-expense-trend {
+    align-self: flex-start;
+    font-size: 4vh;
+    font-weight: 600;
+    margin-bottom: 3vh;
+    margin-left: 4.5vw;
+    text-decoration: underline;
+}
+.spending-analytics-summary {
+    font-size: 3.75vh;
+    margin-right: auto;
+}
+.spending-analytics-h2 {
+    font-size: 3.8vh;
+    font-weight: 700;
+}
+.pie-chart-container {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+}
+.category-expense-distribution-chart {
+    align-self: flex-start;
+    font-size: 4vh;
+    font-weight: 600;
+    margin-bottom: 3vh;
+    margin-left: 4.5vw;
+    text-decoration: underline;
+}
+.pie-chart-container {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8vh;
+    /* background-color: rgb(253, 253, 176); */
+    transition: transform 1s ease;
+}
+.inner-pie-chart-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 70%;
+}
+.category-distribution-summary {
+    font-size: 3vh;
+}
+.line-graph-container:hover, .pie-chart-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(44, 218, 157, 0.35);
+}

@@ -1,0 +1,56 @@
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.transaction-type {
+    display: flex;
+    align-items: center;
+    margin-left: 4.3vw;
+    width: 15vw;
+    height: auto;
+    font-size: 3.5vh;
+    overflow-wrap: break-word;
+}
+.transaction-category {
+    display: flex;
+    align-items: center;
+    margin-left: 4.3vw;
+    width: 20vw;
+    height: auto;
+    font-size: 3.5vh;
+    overflow-wrap: break-word;
+}
+.transaction-amount {
+    display: flex;
+    align-items: center;
+    width: 15vw;
+    height: auto;
+    margin-left: 4.3vw;
+    font-size: 3.5vh;
+    overflow-wrap: break-word;
+}
+.transaction-date {
+    display: flex;
+    align-items: center;
+    width: 15vw;
+    height: auto;
+    margin-left: 4.3vw;
+    font-size: 3.5vh;
+    overflow-wrap: break-word;
+}
+.delete-transaction-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    border: none;
+    color: red;
+    background-color: white;
+    font-weight: bold;
+    font-size: 3.92vh;
+    transition: transform 0.2s ease;
+}
+.delete-transaction-button:hover {
+    transform: scale(1.4); 
+}

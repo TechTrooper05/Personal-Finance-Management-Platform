@@ -1,0 +1,90 @@
+.flex-container {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vh;
+}
+.transactionForm-container {
+    height: 35vh;
+    width: 91%;
+    background-color: #F4F9E9;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 10vh;
+    border: 2vh solid transparent;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease;
+}
+.transact-box1 {
+    font-size: 4.5vh;
+    font-weight: bold;
+    margin-left: 2vw;
+    margin-top: 2vh;
+    width: 100%;
+    color: #4C2B36;
+}
+.transact-box2 {
+    display: flex;
+    height: 12vh;
+}
+.innertransact-box1 {
+    display: flex;
+    height: 10vh;
+    width: 48vw;
+    flex-wrap: wrap;
+    row-gap: 2vh;
+    align-items: center;
+}
+.input-text {
+    font-size: 1.5vw;
+    padding-right: 1vw;
+    width: 9vw;
+    color: #4C2B36;
+}
+input, select {
+    padding-left: 10px;
+    height: 5vh;
+    width: 10vw;
+    margin-right: 5vw;
+    border: 0 solid transparent;
+    appearance: none;
+    border-radius: 2vh;
+    border: 0vh solid transparent;
+}
+.innertransact-box2 {
+    height: 15vh;
+    width: 35vw;
+    display: flex;
+}
+.innertransact-box2 input {
+    height: 12vh;
+    width: 30vw;
+}
+.transact-box3 {
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.error-message {
+    color: red;
+}
+.transact-box3 button {
+    height: 5vh;
+    width: 80%;
+    background-color: white;
+    color: #3a2129;
+    border: none;
+    border-radius: 3vh;
+    transition: transform 0.2s ease;
+}
+.transactionForm-container:hover{
+    transform: scale(1.05) translateY(-0.75vh);
+}
+.transact-box3 button:hover{
+    transform: scaleX(1.2);
+}

@@ -1,0 +1,10 @@
+.line-graph {
+    height: 100%;
+    width:60%;
+    /* margin-right: auto; */
+    /* background-color: rgb(44,218,157,0.5); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2vh;
+}

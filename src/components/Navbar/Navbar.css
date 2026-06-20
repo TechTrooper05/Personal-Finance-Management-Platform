@@ -1,0 +1,43 @@
+.navbar {
+    width: 100%;
+    background-color: black;
+}
+.elements {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 9vh;
+    font-size: 3vh;
+}
+.logo {
+    height: 8vh;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2vmin;
+    margin-left: 1vmin;
+}
+.dashboard {
+    margin-right: 2vmin;
+}
+.transactions {
+    margin-right: 2vmin;
+}
+.analytics {
+    margin-right: 2vmin;
+}
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 3vh;
+}
+.dashboard:hover, .analytics:hover, .transactions:hover {
+    transform: scale(1.1);
+    font-weight: bold;
+    color: rgb(240, 250, 211);
+}
