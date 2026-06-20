@@ -35,9 +35,9 @@ function FinancialOverview({transactions}) {
         );
         })
         .reduce((total, transaction) => total + Number(transaction.amount), 0);
-    const totalIncome = transactions
-        .filter((transaction) => transaction.type === "Income")
-        .reduce((total, transaction) => total + Number(transaction.amount), 0);
+    // const totalIncome = transactions
+    //     .filter((transaction) => transaction.type === "Income")
+    //     .reduce((total, transaction) => total + Number(transaction.amount), 0);
     const monthlyIncome = transactions
         .filter((transaction) => {
             const transactionDate = new Date(transaction.date);
@@ -47,9 +47,9 @@ function FinancialOverview({transactions}) {
         );
     })
         .reduce((total, transaction) => total + Number(transaction.amount), 0);
-    const totalExpense = transactions
-        .filter((transaction) => transaction.type === "Expense")
-        .reduce((total, transaction) => total + Number(transaction.amount), 0);   
+    // const totalExpense = transactions
+    //     .filter((transaction) => transaction.type === "Expense")
+    //     .reduce((total, transaction) => total + Number(transaction.amount), 0);   
     const monthlySavingsRate = monthlyIncome > 0
     ? ((monthlyIncome - monthlyExpense) / monthlyIncome) * 100 : 0; 
     

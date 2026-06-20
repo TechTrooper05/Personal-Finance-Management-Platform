@@ -1,5 +1,5 @@
 import './Transactions.css';
-import Navbar from "../../components/Navbar/Navbar";
+// import Navbar from "../../components/Navbar/Navbar";
 import TransactionList from '../../components/TransactionList/TransactionList';
 import { useState } from 'react';
 const filterCategories = [
