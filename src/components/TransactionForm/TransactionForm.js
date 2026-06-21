@@ -45,7 +45,7 @@ function TransactionForm({transactions, setTransactions, balanceAmount}) {
       setError("Please enter description");
       return;
     }
-    if (category==='Expense' && amount>balanceAmount){
+    if (type==='Expense' && amount>balanceAmount){
       setError("Insufficient Balance!");
       return;
     }
