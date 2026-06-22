@@ -13,7 +13,7 @@
     justify-content: center;
     padding-left: 2vh;
     border-radius: 2vh;
-    box-shadow: 0 0px 24px rgba(179, 194, 242,1);
+    box-shadow: 0 0px 24px rgb(201, 179, 242);
     animation: slider 0.6s forwards;
     animation-delay: 0.1s;
     transition: transform 1s ease;
@@ -26,7 +26,7 @@
     justify-content: center;
     padding-left: 2vh;
     border-radius: 2vh;
-    box-shadow: 0 0px 18px rgba(115, 92, 221, 0.7);
+    box-shadow: 0 0px 18px rgb(116, 92, 221);
     margin-top: 3vh;
     animation: slider 0.6s forwards;
     transition: transform 1s ease;
@@ -47,4 +47,7 @@
 }
 .monthly-overview:hover, .yearly-overview:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 10px #a855f7,
+            0 0 20px #a855f7,
+            0 0 40px #a855f7;
 }

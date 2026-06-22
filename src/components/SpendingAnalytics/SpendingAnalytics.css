@@ -8,6 +8,8 @@
     border-radius: 8vh;
     /* background-color: rgb(253, 253, 176); */
     transition: transform 1s ease;
+    background-color: rgba(255, 255, 255, 0.05);
+    
 }
 .inner-line-graph-container {
     display: flex;
@@ -32,11 +34,6 @@
     font-size: 3.8vh;
     font-weight: 700;
 }
-.pie-chart-container {
-    width: 100%;
-    height: 60vh;
-    display: flex;
-}
 .category-expense-distribution-chart {
     align-self: flex-start;
     font-size: 4vh;
@@ -53,8 +50,10 @@
     align-items: center;
     justify-content: center;
     border-radius: 8vh;
+    margin-top: 2rem;
     /* background-color: rgb(253, 253, 176); */
     transition: transform 1s ease;
+    background-color: rgba(255, 255, 255, 0.05);
 }
 .inner-pie-chart-container {
     display: flex;
@@ -68,5 +67,7 @@
 }
 .line-graph-container:hover, .pie-chart-container:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 18px rgba(44, 218, 157, 0.35);
+    box-shadow: 0 0 10px #a855f7,
+            0 0 20px #a855f7,
+            0 0 40px #a855f7;
 }

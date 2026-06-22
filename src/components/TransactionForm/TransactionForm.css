@@ -1,24 +1,36 @@
+
 .flex-container {
-    height: 40vh;
-    width: 100%;
+    position: fixed;
+    inset: 0;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 5vh;
+
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+
+    z-index: 1000;
 }
-.transactionForm-container {
-    height: 35vh;
-    width: 91%;
+ .transactionForm-container {
+    height: 80%;
+    width: 40%;
+
     background-color: #F4F9E9;
+
+    position: relative;
+    z-index: 1001;
+
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+
     border-radius: 10vh;
     border: 2vh solid transparent;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     transition: transform 0.2s ease;
 }
-.transact-box1 {
+/* .transact-box1 {
     font-size: 4.5vh;
     font-weight: bold;
     margin-left: 2vw;
@@ -70,9 +82,6 @@ input, select {
     align-items: center;
     justify-content: center;
 }
-.error-message {
-    color: red;
-}
 .transact-box3 button {
     height: 5vh;
     width: 80%;
@@ -87,4 +96,81 @@ input, select {
 }
 .transact-box3 button:hover{
     transform: scaleX(1.2);
+} */
+ .error-message {
+    color: red;
+}
+.transaction-form-header {
+    height: 20%;
+    width: 90%;
+    padding-top: 2rem;
+    font-size: 2.75rem;
+    font-weight: 600;
+    color: #3a2129;
+}
+.transaction-form-text {
+    width: 80%;
+    font-size: 1.3rem;
+    color: #3a2129;
+    margin-bottom: 0.25rem;
+}
+.row-1 {
+    height: 15%;
+    width: 90%;
+    display: flex;
+}
+.row-2 {
+    height: 15%;
+    width: 90%;
+    display: flex;
+}
+.row-3 {
+    height: 20%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.row-4 {
+    height: 20%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.column1 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.column2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.transactionForm-container input,.transactionForm-container select {
+    height: 50%;
+    width: 90%;
+    appearance: none;
+    border-radius: 2vh;
+    border: 0 solid transparent;
+    padding-left: 0.75rem;
+}
+.description-box {
+    height: 60%;
+    width: 100%;
+}
+.row-4 button {
+    color: #3a2129;
+    height: 40%;
+    width: 20%;
+    border-radius: 1rem;
+    background-color: #e3d1d6;
+
+}
+.column2-content {
+    width: 90%;
+    margin-left: auto;
 }

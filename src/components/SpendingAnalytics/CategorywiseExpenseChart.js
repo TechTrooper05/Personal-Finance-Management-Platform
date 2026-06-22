@@ -17,7 +17,7 @@ function CategorywiseExpenseChart({categoryData}) {
     );
     const category_colors = {
         Food: "#51E5FF",
-        Transportation: "#440381",
+        Transportation: "#a140fc",
         Shopping: "#EC368D",
         Entertainment: "#FFA5A5",
         Bills: "#FFD6C0",

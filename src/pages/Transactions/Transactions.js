@@ -46,42 +46,44 @@ function Transactions({transactions, setTransactions}) {
     }
     return (
         <>
-        <div className="search-sort-container">
-            <div className="sort-container">
-                <i className="fa-solid fa-sort sort-icon"></i>
-                <select value={sortBy} className='sort-button' onChange={(e) => setSortBy(e.target.value)}>
-                    <option value="">No Sorting</option>
-                    <option value="date-desc">Date (Newest First)</option>
-                    <option value="date-asc">Date (Oldest First)</option>
-                    <option value="amount-desc">Amount (High → Low)</option>
-                    <option value="amount-asc">Amount (Low → High)</option>
-                </select>
+        <div className="transaction-page-container">
+            <div className="search-sort-container">
+                <div className="sort-container">
+                    <i className="fa-solid fa-sort sort-icon"></i>
+                    <select value={sortBy} className='sort-button' onChange={(e) => setSortBy(e.target.value)}>
+                        <option value="">No Sorting</option>
+                        <option value="date-desc">Date (Newest First)</option>
+                        <option value="date-asc">Date (Oldest First)</option>
+                        <option value="amount-desc">Amount (High → Low)</option>
+                        <option value="amount-asc">Amount (Low → High)</option>
+                    </select>
+                </div>
+                <div className="filter-container">
+                    <i className="fa-solid fa-filter filter-icon"></i>
+                    <select
+                        value={selectedCategory}
+                        onChange={(e) => setSelectedCategory(e.target.value)}
+                        className="filter-select"
+                    >
+                        <option value="All">All Categories</option>
+                        {filterCategories.map((item)=>(
+                            <option key={item} value={item}>
+                                {item}
+                            </option>
+                        ))}  
+                    </select>
+                </div>
+                <div className="search-container">
+                    <i className="fa-brands fa-sistrix search-icon"></i>
+                    <input className='search-button' type="search" placeholder='Search' value={searchText} onChange={(e)=>setSearchText(e.target.value)}/>
+                </div>
             </div>
-            <div className="filter-container">
-                <i className="fa-solid fa-filter filter-icon"></i>
-                <select
-                    value={selectedCategory}
-                    onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="filter-select"
-                >
-                    <option value="All">All Categories</option>
-                    {filterCategories.map((item)=>(
-                        <option key={item} value={item}>
-                            {item}
-                        </option>
-                    ))}  
-                </select>
-            </div>
-            <div className="search-container">
-                <i className="fa-brands fa-sistrix search-icon"></i>
-                <input className='search-button' type="search" placeholder='Search' value={searchText} onChange={(e)=>setSearchText(e.target.value)}/>
-            </div>
-        </div>
 
-        <p className='main-heading'>Transaction List</p>
-        {sortedTransactions.map((transaction) => (
-        <TransactionList key={transaction.id} transaction={transaction} transactions={transactions} setTransactions={setTransactions}/>
-        ))}
+            <p className='main-heading'>Transaction List</p>
+            {sortedTransactions.map((transaction) => (
+            <TransactionList key={transaction.id} transaction={transaction} transactions={transactions} setTransactions={setTransactions}/>
+            ))}
+        </div>
         </>
     );
 };

@@ -1,6 +1,8 @@
 .navbar {
     width: 100%;
-    background-color: black;
+    /* background-color: black; */
+    background-color: #200116;
+    border-bottom: 2px solid black;
 }
 .elements {
     display: flex;

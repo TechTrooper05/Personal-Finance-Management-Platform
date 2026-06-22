@@ -20,12 +20,22 @@ function MonthlyExpenseChart({monthlyData}){
                     strokeDasharray="3 3" />
                     <XAxis 
                     dataKey="month"
-                    tick={{ fill: "#000000" }}
+                    tick={{ fill: "#ffffff" }}
                     />
                     <YAxis 
-                    tick={{ fill: "#000000" }}
+                    tick={{ fill: "#ffffff" }}
                     />
-                    <Tooltip />
+                    <Tooltip contentStyle={{
+                        backgroundColor: "#100007",
+                        border: "1px solid #a855f7"
+                    }}
+                    labelStyle={{
+                        color: "#ffffff"
+                    }}
+                    itemStyle={{
+                        color: "#ffffff"
+                    }}
+                    />
                     <Line
                         type="monotone"
                         dataKey="expense"

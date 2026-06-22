@@ -20,7 +20,7 @@ const categories = {
   ]
 };
 
-function TransactionForm({transactions, setTransactions, balanceAmount}) {
+function TransactionForm({transactions, setTransactions, balanceAmount, showForm, setShowForm}) {
   const [type, setType] = useState("Expense");
   const [category, setCategory] = useState("");
   const [amount, setAmount] = useState("");
@@ -58,6 +58,7 @@ function TransactionForm({transactions, setTransactions, balanceAmount}) {
       date,
       description
     }
+    setShowForm(false);
     setTransactions([...transactions,newTransaction]);
     setType("Expense");
     setCategory("");
@@ -69,54 +70,55 @@ function TransactionForm({transactions, setTransactions, balanceAmount}) {
     <>
     <div className="flex-container">
       <div className='transactionForm-container'>
-        <div className="transact-box1">Add Transaction</div>
-        <div className="transact-box2">
-          <div className="innertransact-box1">
-              <p className='input-text'>Type</p>
-              <div className="type-dropdown">
-                  <select
-                      value={type}
-                      onChange={(e) => {
-                      setType(e.target.value);
-                      setCategory("");
-                      }}
-                  >
-                      <option value="Expense">Expense</option>
-                      <option value="Income">Income</option>
-                  </select>
-              </div>
-              <p className='input-text'>Amount</p>
-              <div className="amount-input">
-                  <input type="number" value={amount} onChange={(e)=>{setAmount(e.target.value)}}/>
-              </div>
-              <p className='input-text'>Category</p>
-              <div className="category-dropdown">
-                  <select
-                      value={category}
-                      onChange={(e) => setCategory(e.target.value)}
-                  >
-                      <option value="" disabled>Choose Category</option>
-
-                      {categories[type].map((item) => (
-                      <option key={item} value={item}>
-                          {item}
-                      </option>
-                      ))}
-                  </select>
-              </div>  
-              <p className='input-text'>Date</p>
-              <div className="date-input">
-                  <input type="date" value={date} onChange={(e)=>{setDate(e.target.value)}}/>
-              </div>              
+        <p className='transaction-form-header'>Add Transaction</p>
+        <div className="row-1">
+          <div className="column1">
+            <p className='transaction-form-text'>Type</p>
+            <select
+                value={type}
+                onChange={(e) => {
+                setType(e.target.value);
+                setCategory("");
+                }}
+            >
+                <option value="Expense">Expense</option>
+                <option value="Income">Income</option>
+            </select>
           </div>
-          <div className="innertransact-box2">
-            <p className='input-text'>Description</p>
-            <input type="text" placeholder='Add Description' value={description} onChange={(e)=>setDescription(e.target.value)}/>
+          <div className="column2">
+            <p className='transaction-form-text column2-content'>Category</p>
+            <select className='column2-content'
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+            >
+              <option value="" disabled>Choose Category</option>
+
+              {categories[type].map((item) => (
+              <option key={item} value={item}>
+                  {item}
+              </option>
+              ))}
+            </select>
           </div>
         </div>
+        <div className="row-2">
+          <div className="column1">
+            <p className='transaction-form-text'>Amount</p>
+            <input type="number" value={amount} onChange={(e)=>{setAmount(e.target.value)}}/>
+          </div>
+          <div className="column2">
+            <p className='transaction-form-text column2-content'>Date</p>
+            <input className='column2-content' type="date" value={date} onChange={(e)=>{setDate(e.target.value)}}/>
+          </div>
+        </div>
+        <div className="row-3">
+          <p className='transaction-form-text'>Description</p>
+          <input className='description-box' type="text" placeholder='Add Description' value={description} onChange={(e)=>setDescription(e.target.value)}/>
+        </div>
         {error && <p className='error-message'>{error}</p>}
-        <div className="transact-box3">
-          <button onClick={handleSubmit}>+ Add Transaction</button>
+        <div className="row-4">
+          <button onClick={()=>setShowForm(false)}>Close</button>
+          <button onClick={handleSubmit}>Save</button>
         </div>
       </div>
     </div>

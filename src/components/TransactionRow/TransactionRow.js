@@ -1,6 +1,6 @@
 import './TransactionRow.css';
 
-function TransactionRow({transaction, transactions, setTransactions}) {
+function TransactionRow({transaction, transactions, setTransactions, isdelete}) {
     function deleteTransaction() {
         setTransactions(transactions.filter(t => t.id !== transaction.id)
         );
@@ -11,7 +11,7 @@ function TransactionRow({transaction, transactions, setTransactions}) {
             <p className='transaction-category'>{transaction.category}</p>
             <p className='transaction-amount'>₹{transaction.amount}</p>
             <p className='transaction-date'>{transaction.date}</p>
-            <button className='delete-transaction-button' onClick={deleteTransaction}>X Delete</button>
+            {isdelete && <button className='delete-transaction-column' onClick={deleteTransaction}>X</button>}
         </div>
     )
 };
