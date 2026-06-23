@@ -140,8 +140,6 @@ npm run build
 
 ## Screenshots
 
-Add screenshots of:
-
 * Dashboard
 ![Dashboard](DashboardSS.png)
 * Transaction Management
