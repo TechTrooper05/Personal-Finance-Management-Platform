@@ -4,12 +4,11 @@ import TransactionForm from '../../components/TransactionForm/TransactionForm';
 import TransactionRow from '../../components/TransactionRow/TransactionRow';
 import "./Dashboard.css";
 
-function Dashboard({transactions, setTransactions}) {
+function Dashboard({transactions, setTransactions, showForm, setShowForm}) {
   const [isdelete, setIsdelete] = useState(false);
   function deleteTransactionTrigger() {
     setIsdelete(!isdelete);
   };
-  const [showForm, setShowForm] = useState(false);
   const incomeAmount = transactions
     .filter(t => t.type === "Income")
     .reduce((sum, t) => sum + Number(t.amount), 0);

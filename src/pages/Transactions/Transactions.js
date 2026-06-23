@@ -1,8 +1,11 @@
 import './Transactions.css';
 // import Navbar from "../../components/Navbar/Navbar";
 import TransactionList from '../../components/TransactionList/TransactionList';
+import TransactionForm from '../../components/TransactionForm/TransactionForm';
 import { useState } from 'react';
 const filterCategories = [
+    "Income",
+    "Expense",
     "Salary",
     "Freelancing",
     "Investments",
@@ -15,14 +18,18 @@ const filterCategories = [
     "Education",
     "Other"
   ];
-function Transactions({transactions, setTransactions}) {
+function Transactions({transactions, setTransactions, showForm, setShowForm}) {
+    const [isdelete, setIsdelete] = useState(false);
+    function deleteTransactionTrigger() {
+        setIsdelete(!isdelete);
+    };
     const [selectedCategory, setSelectedCategory] = useState("All");
     const [searchText, setSearchText] = useState("");
     const [sortBy, setSortBy] = useState("");
     const filteredTransactions = transactions.filter((t) => {
         const matchesCategory =
             selectedCategory === "All" ||
-            t.category === selectedCategory;
+            t.category === selectedCategory || t.type === selectedCategory;
 
         const matchesSearch =
             t.description
@@ -31,6 +38,13 @@ function Transactions({transactions, setTransactions}) {
 
         return matchesCategory && matchesSearch;
     });
+    const incomeAmount = transactions
+        .filter(t => t.type === "Income")
+        .reduce((sum, t) => sum + Number(t.amount), 0);
+    const expenseAmount = transactions
+        .filter(t => t.type === "Expense")
+        .reduce((sum, t) => sum + Number(t.amount), 0);
+    const balanceAmount = incomeAmount - expenseAmount;
     let sortedTransactions = [...filteredTransactions];
     if (sortBy === "amount-asc") {
         sortedTransactions.sort((a, b) => Number(a.amount) - Number(b.amount));
@@ -78,10 +92,14 @@ function Transactions({transactions, setTransactions}) {
                     <input className='search-button' type="search" placeholder='Search' value={searchText} onChange={(e)=>setSearchText(e.target.value)}/>
                 </div>
             </div>
-
+            <div className="transaction-buttons">
+                <button className="add-transaction-button" onClick={()=>setShowForm(true)}>Add</button>
+                <button className="delete-transaction-button" onClick={deleteTransactionTrigger}>Delete</button>
+            </div>
+            {showForm && <TransactionForm transactions={transactions} setTransactions={setTransactions} balanceAmount={balanceAmount} showForm={showForm} setShowForm={setShowForm}/>}
             <p className='main-heading'>Transaction List</p>
             {sortedTransactions.map((transaction) => (
-            <TransactionList key={transaction.id} transaction={transaction} transactions={transactions} setTransactions={setTransactions}/>
+            <TransactionList key={transaction.id} transaction={transaction} transactions={transactions} setTransactions={setTransactions} isdelete={isdelete} setIsdelete={setIsdelete}/>
             ))}
         </div>
         </>

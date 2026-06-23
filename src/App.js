@@ -19,12 +19,12 @@ function App() {
       JSON.stringify(transactions)
     );
   }, [transactions]);
-
+  const [showForm, setShowForm] = useState(false);
   return (
     <>
     <Navbar page={page} setPage={setPage}/>
-    {page==='Dashboard' && <Dashboard transactions={transactions} setTransactions={setTransactions}/>}
-    {page==='Transactions' && <Transactions transactions={transactions} setTransactions={setTransactions}/>}
+    {page==='Dashboard' && <Dashboard transactions={transactions} setTransactions={setTransactions} showForm={showForm} setShowForm={setShowForm}/>}
+    {page==='Transactions' && <Transactions transactions={transactions} setTransactions={setTransactions} showForm={showForm} setShowForm={setShowForm}/>}
     {page==='Analytics' && <Analytics transactions={transactions}/>}
     </>
   );

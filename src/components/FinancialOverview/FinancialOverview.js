@@ -68,7 +68,7 @@ function FinancialOverview({transactions}) {
             <p className='overview-h2'>Year {currentYear}</p>
             <p className='overview-h3'>Income: ₹{yearlyIncome}</p>
             <p className='overview-h3'>Expense: ₹{yearlyExpense}</p>
-            <p className='overview-h3'>Net Savings: {yearlyIncome-yearlyExpense}</p>
+            <p className='overview-h3'>Net Savings: ₹{yearlyIncome-yearlyExpense}</p>
         </div>
         </>
     );

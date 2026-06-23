@@ -16,8 +16,11 @@
     height: 80%;
     width: 40%;
 
-    background-color: #F4F9E9;
-
+    /* background-color: #F4F9E9; */
+    background-color: lavender;
+    box-shadow: 0 0 10px #a855f7,
+            0 0 20px #a855f7,
+            0 0 40px #a855f7;
     position: relative;
     z-index: 1001;
 
@@ -27,77 +30,11 @@
 
     border-radius: 10vh;
     border: 2vh solid transparent;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    /* box-shadow: 0 4px 12px rgba(0,0,0,0.15); */
     transition: transform 0.2s ease;
 }
-/* .transact-box1 {
-    font-size: 4.5vh;
-    font-weight: bold;
-    margin-left: 2vw;
-    margin-top: 2vh;
-    width: 100%;
-    color: #4C2B36;
-}
-.transact-box2 {
-    display: flex;
-    height: 12vh;
-}
-.innertransact-box1 {
-    display: flex;
-    height: 10vh;
-    width: 48vw;
-    flex-wrap: wrap;
-    row-gap: 2vh;
-    align-items: center;
-}
-.input-text {
-    font-size: 1.5vw;
-    padding-right: 1vw;
-    width: 9vw;
-    color: #4C2B36;
-}
-input, select {
-    padding-left: 10px;
-    height: 5vh;
-    width: 10vw;
-    margin-right: 5vw;
-    border: 0 solid transparent;
-    appearance: none;
-    border-radius: 2vh;
-    border: 0vh solid transparent;
-}
-.innertransact-box2 {
-    height: 15vh;
-    width: 35vw;
-    display: flex;
-}
-.innertransact-box2 input {
-    height: 12vh;
-    width: 30vw;
-}
-.transact-box3 {
-    height: 5vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.transact-box3 button {
-    height: 5vh;
-    width: 80%;
-    background-color: white;
-    color: #3a2129;
-    border: none;
-    border-radius: 3vh;
-    transition: transform 0.2s ease;
-}
-.transactionForm-container:hover{
-    transform: scale(1.05) translateY(-0.75vh);
-}
-.transact-box3 button:hover{
-    transform: scaleX(1.2);
-} */
- .error-message {
+
+.error-message {
     color: red;
 }
 .transaction-form-header {
@@ -106,13 +43,13 @@ input, select {
     padding-top: 2rem;
     font-size: 2.75rem;
     font-weight: 600;
-    color: #3a2129;
+    color: #241139;
 }
 .transaction-form-text {
     width: 80%;
     font-size: 1.3rem;
-    color: #3a2129;
     margin-bottom: 0.25rem;
+    color: #241139;
 }
 .row-1 {
     height: 15%;
@@ -163,11 +100,13 @@ input, select {
     width: 100%;
 }
 .row-4 button {
-    color: #3a2129;
+    color: #241139;
     height: 40%;
     width: 20%;
     border-radius: 1rem;
-    background-color: #e3d1d6;
+    background-color: #fae4f2;
+    border: 1px solid;
+    border-color: #241139;
 
 }
 .column2-content {
