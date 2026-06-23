@@ -1,4 +1,4 @@
-# FinTrack - Personal Finance Management Platform
+# FinTrack - Financial Tracking & Anaytics
 
 ## Live Demo
 

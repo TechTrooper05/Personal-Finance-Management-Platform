@@ -1,4 +1,4 @@
-import logo from "./FinanceManagementSystemLogo.png";
+import logo from "./FinTrack-Logo.png";
 import "./Navbar.css";
 
 function Navbar({page, setPage}) {
