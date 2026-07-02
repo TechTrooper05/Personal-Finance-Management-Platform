@@ -1,9 +1,21 @@
 import './TransactionList.css';
+import api from "../../Utils/api";
 
 function TransactionList({transaction, transactions, setTransactions, isdelete, setIsdelete}) {
     function deleteTransaction() {
-        setTransactions(transactions.filter(t => t.id !== transaction.id)
-        );
+        api.delete(
+            `/api/transactions/${transaction._id}`,
+            { withCredentials: true }
+        ).then(() => {
+            setTransactions(prev =>
+                prev.filter(
+                    t => t._id !== transaction._id
+                )
+            );
+        })
+        .catch((err) => {
+            toast.error(err);
+        });
         setIsdelete(false);
     }
     return (

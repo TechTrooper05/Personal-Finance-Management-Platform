@@ -2,7 +2,7 @@ import './TransactionRow.css';
 import api from "../../Utils/api";
 import toast from "react-hot-toast";
 
-function TransactionRow({transaction, setTransactions, isdelete}) {
+function TransactionRow({transaction, setTransactions, isdelete, setIsdelete}) {
     function deleteTransaction() {
         api.delete(
             `/api/transactions/${transaction._id}`,
@@ -17,6 +17,7 @@ function TransactionRow({transaction, setTransactions, isdelete}) {
         .catch((err) => {
             toast.error(err);
         });
+        setIsdelete(false);
     }
     return (
         <div className="row">

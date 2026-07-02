@@ -43,7 +43,7 @@ function Dashboard({transactions, setTransactions, showForm, setShowForm}) {
         </div>
         <hr />
         {transactions.slice(-5).reverse().map((transaction) => (
-          <TransactionRow key={transaction._id} transaction={transaction} setTransactions={setTransactions} isdelete={isdelete}/>
+          <TransactionRow key={transaction._id} transaction={transaction} setTransactions={setTransactions} isdelete={isdelete} setIsdelete={setIsdelete}/>
         ))} 
         <div className="transaction-buttons">
           <button className="add-transaction-button" onClick={()=>setShowForm(true)}>Add</button>
