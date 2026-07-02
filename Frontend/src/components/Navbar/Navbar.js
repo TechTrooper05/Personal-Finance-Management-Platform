@@ -2,7 +2,7 @@ import logo from "./FinTrack-Logo.png";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
-import axios from "axios";
+import api from '../../Utils/api';
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../Context/AuthContext";
@@ -40,8 +40,8 @@ function Navbar() {
   };
   const logOut = async () => {
     try {
-      await axios.post(
-        "http://localhost:5000/api/auth/logout",
+      await api.post(
+        "/api/auth/logout",
         {},
         { withCredentials: true }
       );

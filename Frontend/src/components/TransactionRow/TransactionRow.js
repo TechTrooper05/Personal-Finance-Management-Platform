@@ -4,8 +4,8 @@ import toast from "react-hot-toast";
 
 function TransactionRow({transaction, setTransactions, isdelete}) {
     function deleteTransaction() {
-        axios.delete(
-            `http://localhost:5000/api/transactions/${transaction._id}`,
+        api.delete(
+            `/api/transactions/${transaction._id}`,
             { withCredentials: true }
         ).then(() => {
             setTransactions(prev =>

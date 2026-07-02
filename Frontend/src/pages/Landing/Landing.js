@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import api from '../../Utils/api';
 import "./Landing.css";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
@@ -80,8 +80,8 @@ const Landing = () => {
                 payload.username = loginData.identifier;
             }
 
-            const response = await axios.post(
-                "http://localhost:5000/api/auth/login",
+            const response = await api.post(
+                "/api/auth/login",
                 payload,
                 {
                     withCredentials: true
@@ -98,8 +98,8 @@ const Landing = () => {
             
             if (error.response?.status === 403) {
                 const userEmail = error.response?.data?.user?.email;
-                await axios.post(
-                    "http://localhost:5000/api/auth/send-otp",
+                await api.post(
+                    "/api/auth/send-otp",
                     {
                         email: userEmail,
                         purpose: "register"
@@ -129,8 +129,8 @@ const Landing = () => {
         e.preventDefault();
         setLoading(true);
         try {
-            const response = await axios.post(
-                "http://localhost:5000/api/auth/register",
+            const response = await api.post(
+                "/api/auth/register",
                 registerData,
                 {
                     withCredentials: true
@@ -140,8 +140,8 @@ const Landing = () => {
             const userEmail = response?.data?.user?.email;
 
             if (response.status === 201) {
-                await axios.post(
-                    "http://localhost:5000/api/auth/send-otp",
+                await api.post(
+                    "/api/auth/send-otp",
                     {
                         email: userEmail,
                         purpose: "register"

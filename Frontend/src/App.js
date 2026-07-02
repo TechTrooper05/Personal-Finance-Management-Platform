@@ -4,7 +4,7 @@ import Transactions from './pages/Transactions/Transactions';
 import Navbar from "./components/Navbar/Navbar";
 import { useState, useEffect } from 'react';
 import Analytics from './pages/Analytics/Analytics';
-import axios from "axios";
+import api from "../src/Utils/api"
 import Landing from "./pages/Landing/Landing";
 import { Routes, Route } from "react-router-dom";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
@@ -25,8 +25,8 @@ function App() {
 
       if (!isAuthenticated) return;
 
-      axios.get(
-          "http://localhost:5000/api/transactions",
+      api.get(
+          "/api/transactions",
           {
               withCredentials: true
           }
@@ -39,8 +39,8 @@ function App() {
   useEffect(() => {
     if (!isAuthenticated) return;
 
-    axios.get(
-      "http://localhost:5000/api/auth/me",
+    api.get(
+      "/api/auth/me",
       {
         withCredentials: true
       }

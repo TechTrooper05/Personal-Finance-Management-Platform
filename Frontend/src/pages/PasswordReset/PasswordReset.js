@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-// import { useAuth } from "../../Context/AuthContext";
-import axios from "axios";
+import api from '../../Utils/api';
 import toast from "react-hot-toast";
 import "./PasswordReset.css";
 
@@ -46,8 +45,8 @@ const PasswordReset = () => {
             setLoading(true);
 
             // API Call updating the password in the database
-            const response = await axios.post(
-                "http://localhost:5000/api/auth/forgot-password",
+            const response = await api.post(
+                "/api/auth/forgot-password",
                 {
                     resetToken,
                     newPassword

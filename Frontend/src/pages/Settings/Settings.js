@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../Context/AuthContext";
-import axios from "axios";
+import api from '../../Utils/api';
 import toast from "react-hot-toast";
 import './Settings.css';
 
@@ -40,7 +40,7 @@ function Settings() {
         e.preventDefault();
         try {
             setLoading(true);
-            const response = await axios.post("http://localhost:5000/api/auth/update-username", {
+            const response = await api.post("/api/auth/update-username", {
                 newUsername,
                 password: currentPassword
             }, { withCredentials: true });
@@ -60,12 +60,12 @@ function Settings() {
         e.preventDefault();
         try {
             setLoading(true);
-            await axios.post("http://localhost:5000/api/auth/update-email", {
+            await api.post("/api/auth/update-email", {
                 newEmail,
                 password: currentPassword
             }, { withCredentials: true });
 
-            const response = await axios.post("http://localhost:5000/api/auth/send-otp", {
+            const response = await api.post("/api/auth/send-otp", {
                 email: newEmail,
                 purpose: "email_change"
             }, { withCredentials: true });
@@ -90,7 +90,7 @@ function Settings() {
         e.preventDefault();
         try {
             setLoading(true);
-            const response = await axios.post("http://localhost:5000/api/auth/update-password", {
+            const response = await api.post("/api/auth/update-password", {
                 currentPassword,
                 newPassword
             }, { withCredentials: true });

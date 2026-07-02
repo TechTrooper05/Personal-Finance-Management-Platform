@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from '../../Context/AuthContext'
 import './VerifyOtp.css'
 import toast from "react-hot-toast";
-import axios from "axios";
+import api from '../../Utils/api';
 
 const VerifyOtp = () => {
     const [otp, setOtp] = useState("");
@@ -35,8 +35,8 @@ const VerifyOtp = () => {
         try {
             setLoading(true);
 
-            const response = await axios.post(
-                "http://localhost:5000/api/auth/verify-otp",
+            const response = await api.post(
+                "/api/auth/verify-otp",
                 {
                     email,
                     otp,
@@ -68,8 +68,8 @@ const VerifyOtp = () => {
 
     const handleResendOtp = async () => {
         try {
-            const response = await axios.post(
-                "http://localhost:5000/api/auth/send-otp",
+            const response = await api.post(
+                "/api/auth/send-otp",
                 {
                     email
                 }

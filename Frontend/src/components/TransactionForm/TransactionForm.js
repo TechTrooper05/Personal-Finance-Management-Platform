@@ -1,6 +1,6 @@
 import './TransactionForm.css';
 import { useState } from "react";
-import axios from "axios";
+import api from "../../Utils/api";
 import toast from "react-hot-toast";
 
 const categories = {
@@ -59,7 +59,7 @@ function TransactionForm({setTransactions, balanceAmount, setShowForm}) {
       date,
       description
     }
-    axios.post("http://localhost:5000/api/transactions", newTransaction, { withCredentials: true }).then((res) => {
+    api.post("/api/transactions", newTransaction, { withCredentials: true }).then((res) => {
       toast.success("Transaction added successfully!");
       setTransactions(prev => [...prev, res.data.transaction]);
       setType("Expense");
