@@ -1,0 +1,90 @@
+.transaction-list-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeInUp 1s;
+    width: 90%;
+    /* box-shadow: 0 0px 18px rgba(115, 92, 221, 0.7); */
+    background-color: var(--surface);
+    border: 2px solid var(--border);
+    margin-top: 2vh;
+    border-radius: 2vh;
+}
+.transaction-list-type {
+    display: flex;
+    align-items: center;
+    width: 17%;
+    height: 50%;
+    font-size: 1.5rem;
+    overflow-wrap: break-word;
+    color: var(--text-muted);
+}
+.transaction-list-category {
+    display: flex;
+    align-items: center;
+    width: 28%;
+    height: 50%;
+    font-size: 1.5rem;
+    overflow-wrap: break-word;
+    color: var(--text-muted);
+}
+.transaction-list-amount {
+    display: flex;
+    align-items: center;
+    width: 25%;
+    height: 50%;
+    font-size: 1.5rem;
+    overflow-wrap: break-word;
+    color: var(--text-muted);
+}
+.transaction-list-date {
+    display: flex;
+    align-items: center;
+    width: 22%;
+    height: 50%;
+    font-size: 1.5rem;
+    overflow-wrap: break-word;
+    color: var(--text-muted)
+}
+.delete-transaction-list-button {
+    display: flex;
+    align-items: center;
+    height: auto;
+    border: none;
+    color: red;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 3.92vh;
+    transition: transform 0.2s ease;
+}
+.transaction-description {
+    display: flex;
+    width: 100%;
+    height: 5vh;
+    font-size: 1.5rem;
+    color: var(--text-muted)
+}
+.details {
+    width: 90%;
+    color: white;
+    height: 12vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.transaction-list-row:hover {
+    transform: translateY(-0.75vh);
+    box-shadow: 0 0 10px #d9b8f8,
+            0 0 20px #dabdf6,
+            0 0 40px #efe3fb;
+    color: white;
+    /* background-color: rgb(246, 246, 151); */
+}
+.delete-transaction-list-button:hover {
+    transform: scale(1.4); 
+}
+.transaction-list-label {
+    margin-right: 0.5rem;
+    color: var(--text-main);
+    font-weight: bold;
+}

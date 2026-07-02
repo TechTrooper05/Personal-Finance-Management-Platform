@@ -1,0 +1,94 @@
+.verify-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg);
+    padding: 20px;
+}
+
+.verify-card {
+    width: 100%;
+    max-width: 420px;
+    background: var(--surface);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.verify-card h1 {
+    margin-bottom: 15px;
+    font-size: 2rem;
+    color: var(--text-main);
+}
+
+.verify-card p {
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.verify-card strong {
+    color: var(--text-main);
+    font-size: 1rem;
+}
+
+.verify-card form {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.verify-card input {
+    padding: 14px;
+    font-size: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+    transition: 0.2s ease;
+    text-align: center;
+    letter-spacing: 6px;
+}
+
+.verify-card input:focus {
+    border-color: var(--border);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+.verify-card button {
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: var(--primary);
+    color: var(--text-main);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.verify-card button:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+.verify-card button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.resend-btn {
+    margin-top: 15px;
+    background: transparent !important;
+    color: #4f46e5 !important;
+    border: none;
+    box-shadow: none;
+}
+
+.resend-btn:hover {
+    background: transparent !important;
+    text-decoration: underline;
+}

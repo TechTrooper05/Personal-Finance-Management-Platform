@@ -1,0 +1,139 @@
+.settings-page-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings-container {
+    width: 60%;
+}
+
+.header-container {
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.account-settings {
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+.info-message {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+}
+
+.profile-info-container, .security-container {
+    margin-top: 3rem;
+    width: 100%;
+    padding: 1.5rem;
+    border: 2px solid var(--border);
+    border-radius: 1rem;
+    background-color: var(--surface);
+}
+
+.profile-header, .security-header {
+    font-size: 1.5rem;
+    color: var(--text-main);
+}
+
+.profile-username, .profile-email, .security-password {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--surface-muted);
+    margin-top: 1rem;
+    padding: 1rem;
+    transition: all 0.25s ease;
+}
+
+.expanded-form-row {
+    height: auto !important;
+    padding: 1.25rem;
+}
+
+.profile-username-header, .profile-email-header, .security-password-header {
+    font-size: 1.2rem;
+    color: var(--text-main);
+}
+
+.profile-username-text, .profile-email-text, .security-password-text {
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+
+.profile-username-right, .profile-email-right, .security-password-right {
+    width: 25%;
+    height: 100%;
+}
+
+.settings-page-container button {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--border);
+    background-color: var(--primary);
+    color: #f3eefc;
+    border-radius: 0.35rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: filter 0.2s ease;
+}
+
+.settings-page-container button:hover {
+    filter: brightness(0.92);
+}
+
+.inline-settings-form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.form-inputs-group {
+    display: flex;
+    gap: 12px;
+    flex: 1;
+}
+
+.form-inputs-group input {
+    flex: 1;
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    border: 1px solid var(--border);
+    border-radius: 0.35rem;
+    outline: none;
+    background: var(--surface);
+    color: var(--text-main);
+}
+
+.form-inputs-group input:focus {
+    border-color: var(--primary);
+}
+
+.form-actions-group {
+    display: flex;
+    gap: 10px;
+    width: 25%;
+}
+
+.form-actions-group button {
+    padding: 10px;
+    font-size: 0.95rem;
+}
+
+.cancel-btn {
+    background-color: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+}
+
+.cancel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}

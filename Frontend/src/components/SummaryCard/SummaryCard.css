@@ -1,0 +1,122 @@
+.summary-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 42vh;
+    padding-bottom: 4vh;
+    width: 90%;
+    border-radius: 4vh;
+    background-color: var(--surface);
+    /* color: var(--text-main); */
+    /* box-shadow: 0 0 14px rgb(255, 255, 255);
+    */
+    border: 2px solid var(--border);
+    flex-wrap: wrap;
+}
+.summary-inner-container {
+    margin-top: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    color: white;
+    flex-wrap: wrap;
+    animation: fadeInUp 1s;
+}
+.income {
+    width: 30%;
+    aspect-ratio: 2;
+    background: linear-gradient(135deg, #0a1a12, #00c853, #69f0ae);
+    border-radius: 5vmin;
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+.expenses {
+    width: 30%;
+    aspect-ratio: 2;
+    background: linear-gradient(135deg, #200122, #6f0000, #ff4b2b);
+    border-radius: 5vmin;
+    transition: transform 0.2s ease;
+}
+.balance {
+    width: 30%;
+    aspect-ratio: 2;
+    background: linear-gradient(135deg, #1c140a, #ffb300, #ffe259);
+    border-radius: 5vmin;
+    transition: transform 0.2s ease;
+}
+.main-heading {
+    width: 90%;
+    color: var(--text-main);
+    font-size: 6vh;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    animation: fadeInDown 1s;
+}
+.container-heading {
+    font-size: 4vh;
+    font-weight: bold;
+}
+.summary-text {
+    font-size: 4.5vh;
+    margin-left: 12.5%;
+}
+.balance:hover{
+    transform: scale(1.1) translateY(-0.75vh);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    background-color: #8fc6fd;
+}
+.expenses:hover{
+    transform: scale(1.1) translateY(-0.75vh);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    background-color: #ec0d3a;
+}
+.income:hover{
+    transform: scale(1.1) translateY(-0.75vh);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    background-color: #b9fc55;
+}
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-top: 12.5%;
+    margin-left: 10%;
+}
+.card-icon {
+    height: 4vh;
+    width: 4vh;
+    border-radius: 0.75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(84, 225, 8, 0.806);
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-5vh);
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(5vh);
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,57 @@
+.overview-h2 {
+    font-size: 3.5vh;
+    font-weight: bold;
+    color: var(--text-main);
+}
+.overview-h3 {
+    font-size: 3vh;
+    color: var(--text-muted);
+}
+.monthly-overview {
+    width: 20%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2vh;
+    border-radius: 2vh;
+    border: 2px solid var(--border);
+    background-color: var(--surface);
+    animation: slider 0.6s forwards;
+    animation-delay: 0.1s;
+    transition: transform 1s ease;
+}
+.yearly-overview {
+    width: 20%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2vh;
+    border-radius: 2vh;
+    border: 2px solid var(--border);
+    background-color: var(--surface-muted);
+    margin-top: 3vh;
+    animation: slider 0.6s forwards;
+    transition: transform 1s ease;
+}
+@keyframes slider {
+    0% {
+        width: 20%;
+    }
+    55% {
+        width: 102%;
+    }
+    82% {
+        width: 95%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+.monthly-overview:hover, .yearly-overview:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #d9b8f8,
+            0 0 20px #dabdf6,
+            0 0 40px #efe3fb;
+}

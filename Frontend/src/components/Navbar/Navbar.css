@@ -1,0 +1,107 @@
+.navbar {
+    width: 100%;
+    background-color: var(--navbar);
+    border-bottom: 2px solid var(--border);
+    padding: 4px;
+}
+
+.elements {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 9vh;
+    font-size: 3vh;
+}
+
+.logo {
+    height: 90%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2vmin;
+    margin-left: 1vmin;
+}
+
+.nav-btn {
+  text-decoration: none;
+  padding: 10px 15px;
+  color: #f3eefc;
+  font-size: 1.3rem;
+}
+
+.btn-logout {
+    background: var(--surface-muted);
+    border: 1px solid var(--border);
+    color: var(--text-main);
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-right: 1rem;
+}
+.nav-btn:hover {
+  color: #a694cc;
+}
+
+.active {
+  color: #a855f7;
+  border-bottom: 2px solid #a855f7;
+}
+.nav-right {
+  position: relative;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: 2%;
+}
+
+.profile-icon {
+  font-size: 32px;
+  cursor: pointer;
+  color: white;
+}
+
+.profile-floater {
+  position: absolute;
+  top: 120%;
+  right: 0;
+
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: 0.2s ease;
+
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.nav-right:hover .profile-floater {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.profile-floater button {
+  background: transparent;
+  border: none;
+  color: var(--text-main);
+  text-align: left;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.profile-floater button:hover {
+  background: var(--primary);
+  color: #f3eefc;
+}

@@ -1,0 +1,45 @@
+:root[data-theme="lavender"] {
+    --bg: #eeeaf8;
+    --surface: #ffffff;
+    --surface-muted: #fbf9ff;
+    --border: #e2daf0;
+    --text-main: #2d1b4e;
+    --text-muted: #6b5b95;
+    --primary: #6f42c1;
+    --primary-hover: #5931a4;
+    --navbar: #0b0518;
+    --accent-glow: rgba(111, 66, 193, 0.08);
+}
+
+:root[data-theme="dark-purple"] {
+    --bg: #0b0518;
+    --surface: #150d2a;
+    --surface-muted: #1e133a;
+    --border: #2d1c54;
+    --text-main: #f3eefc;
+    --text-muted: #a694cc;
+    --primary: #9d66ff;
+    --primary-hover: #b385ff;
+    --navbar: #0b0518;
+    --accent-glow: rgba(157, 102, 255, 0.15);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #100007;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
