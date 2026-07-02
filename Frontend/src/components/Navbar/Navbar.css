@@ -45,7 +45,7 @@
   color: #a694cc;
 }
 
-.active {
+.navbar .active {
   color: #a855f7;
   border-bottom: 2px solid #a855f7;
 }

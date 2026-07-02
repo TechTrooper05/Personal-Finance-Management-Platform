@@ -23,20 +23,46 @@
     --navbar: #0b0518;
     --accent-glow: rgba(157, 102, 255, 0.15);
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  background-color: var(--bg);
+}
+
 body {
   margin: 0;
-  background-color: #100007;
+  background-color: var(--bg);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Width of the scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Background track */
+::-webkit-scrollbar-track {
+    background: #1e1e2f;
+}
+
+/* Scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background: #8b5cf6;
+    border-radius: 5px;
+}
+
+/* Hover effect */
+::-webkit-scrollbar-thumb:hover {
+    background: #7c3aed;
 }
 
 code {

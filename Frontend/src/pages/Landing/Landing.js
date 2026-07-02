@@ -4,6 +4,7 @@ import "./Landing.css";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../Context/AuthContext";
+import AnimatedSection from "../../components/AnimatedSections/AnimatedSections";
 
 const Landing = () => {
     // const [theme, setTheme] = useState("dark-purple");
@@ -204,7 +205,7 @@ const Landing = () => {
             </header>
 
             {/* Hero Section */}
-            <section className="hero">
+            <AnimatedSection className="hero" delay={0}>
                 <div className="container">
                     <h1>
                         Track every rupee. Understand your spending.
@@ -221,39 +222,43 @@ const Landing = () => {
                         </a>
                     </div>
                 </div>
-            </section>
-
+            </AnimatedSection>
             {/* Intelligent Core Systems Section */}
             <section className="features">
                 <div className="container">
-                    <h2 className="section-title">Intelligent Core Systems</h2>
-                    <p className="section-subtitle">
+                    <AnimatedSection className="section-title" delay={0}>
+                        <h2 className="section-title">Intelligent Core Systems</h2>
+                    </AnimatedSection>
+                    <AnimatedSection className="section-subtitle" delay={0}>
+                        <p className="section-subtitle">
                         Everything you need to map out your modern financial footprint.
                     </p>
+                    </AnimatedSection>
                     
                     <div className="grid-4">
-                        <div className="feature-card">
+                        
+                        <AnimatedSection className="feature-card" delay={0}>
                             <h3>Expense Tracking</h3>
                             <p>Log your outgoings dynamically with smart, immediate tags.</p>
-                        </div>
-                        <div className="feature-card">
+                        </AnimatedSection>
+                        <AnimatedSection className="feature-card" delay={150}>
                             <h3>Income Tracking</h3>
                             <p>Keep precise tallies of diverse revenue streams without messy tabs.</p>
-                        </div>
-                        <div className="feature-card">
+                        </AnimatedSection>
+                        <AnimatedSection className="feature-card" delay={300}>
                             <h3>Spending Analytics</h3>
                             <p>Understand complex micro-trends using beautiful algorithmic breakdowns.</p>
-                        </div>
-                        <div className="feature-card">
+                        </AnimatedSection>
+                        <AnimatedSection className="feature-card" delay={450}>
                             <h3>Category Insights</h3>
                             <p>Instantly know exactly how much budget goes into food, leisure, or rent.</p>
-                        </div>
+                        </AnimatedSection>
                     </div>
                 </div>
             </section>
 
             {/* Engineered Differently Section */}
-            <section className="why-us">
+            {/* <section className="why-us">
                 <div className="container">
                     <h2 className="section-title" style={{ marginBottom: '50px' }}>Engineered Differently</h2>
                     
@@ -288,8 +293,82 @@ const Landing = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
+            <section className="why-us">
+                <div className="container">
+                    <h2
+                        className="section-title"
+                        style={{ marginBottom: "50px" }}
+                    >
+                        Engineered Differently
+                    </h2>
 
+                    <div className="grid-2">
+
+                        <AnimatedSection
+                            className="why-item"
+                            delay={0}
+                        >
+                            <div className="why-icon"></div>
+                            <div>
+                                <h3>Simple and intuitive UI</h3>
+                                <p>
+                                    Zero bloatware. Just smooth,
+                                    minimalist visuals focused clean
+                                    layout metrics.
+                                </p>
+                            </div>
+                        </AnimatedSection>
+
+                        <AnimatedSection
+                            className="why-item"
+                            delay={150}
+                        >
+                            <div className="why-icon"></div>
+                            <div>
+                                <h3>Secure JWT Authentication</h3>
+                                <p>
+                                    State-of-the-art encrypted token
+                                    safety barriers shield transactional
+                                    tracking privacy data.
+                                </p>
+                            </div>
+                        </AnimatedSection>
+
+                        <AnimatedSection
+                            className="why-item"
+                            delay={300}
+                        >
+                            <div className="why-icon"></div>
+                            <div>
+                                <h3>Real-time Overview</h3>
+                                <p>
+                                    Instantly responsive. Watch balances
+                                    dynamically shift across structural
+                                    data interfaces.
+                                </p>
+                            </div>
+                        </AnimatedSection>
+
+                        <AnimatedSection
+                            className="why-item"
+                            delay={450}
+                        >
+                            <div className="why-icon"></div>
+                            <div>
+                                <h3>Students & Professionals</h3>
+                                <p>
+                                    Flexible parameter frameworks
+                                    adjusting effortlessly to small
+                                    personal budgets or robust active
+                                    careers.
+                                </p>
+                            </div>
+                        </AnimatedSection>
+
+                    </div>
+                </div>
+            </section>
             {/* Auth Section */}
             <section
                 className="auth-cta-section"

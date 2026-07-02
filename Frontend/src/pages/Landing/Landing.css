@@ -1,6 +1,7 @@
 
 html {
     scroll-behavior: smooth;
+    background-color: var(--bg);
 }
 
 * {
@@ -48,6 +49,7 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 80px;
+    animation: longfadeIn 1s ease-in-out;
 }
 
 .landing-logo {
@@ -113,6 +115,8 @@ header {
     
     padding: 60px 0; 
     text-align: center;
+
+    /* animation: longfadeIn 1s ease-in-out; */
 }
 
 .hero h1 {
@@ -265,14 +269,17 @@ header {
 
 .auth-form.active {
     display: block;
-    animation: fadeIn 0.3s ease-in-out;
+    animation: shortfadeIn 0.3s ease-in-out;
 }
 
-@keyframes fadeIn {
+@keyframes shortfadeIn {
     from { opacity: 0; transform: translateY(4px); }
     to { opacity: 1; transform: translateY(0); }
 }
-
+/* @keyframes longfadeIn {
+    from { opacity: 0; transform: translateY(1rem); }
+    to { opacity: 1; transform: translateY(0); }
+} */
 .input-group {
     margin-bottom: 20px;
 }
@@ -340,4 +347,20 @@ header {
     .grid-2 {
         gap: 24px;
     }
+}
+.animate-hidden {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.animate-show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-hidden,
+.animate-show {
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
 }
