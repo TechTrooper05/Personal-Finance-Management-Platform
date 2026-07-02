@@ -1,8 +1,8 @@
-# FinTrack - Financial Tracking & Anaytics
+# 💰 FinTrack - Personal Finance Management Platform
 
 ## Live Demo
 
-🔗 [Live Application](https://fintrack-kartik.vercel.app/)
+🔗 **Live Application:** https://fintrack-kartik.vercel.app/
 
 ---
 
@@ -10,10 +10,10 @@
 
 ⚠️ **This project is currently under active development.**
 
-* Bugs are being fixed and improvements are ongoing.
-* Some features may not be fully implemented or accessible.
-* UI responsiveness across different screen sizes is currently being worked on.
-* Additional features and enhancements are planned for future releases.
+* Bugs are actively being fixed and improvements are ongoing.
+* Mobile and tablet responsiveness is currently being implemented.
+* Additional features and analytics capabilities are planned for future releases.
+* Some features may not be fully implemented or may change during development.
 
 ---
 
@@ -27,65 +27,101 @@ FinTrack aims to provide a centralized platform where users can record transacti
 
 ## Overview
 
-FinTrack is a React-based Personal Finance Management Platform designed to help users organize and analyze their financial data. The application provides transaction management, financial summaries, and data visualizations to support better financial decision-making.
+FinTrack is a full-stack Personal Finance Management Platform designed to help users organize and analyze their financial data.
+
+The application provides secure user authentication, transaction management, financial summaries, and interactive data visualizations to support better financial decision-making.
 
 ---
 
 ## Current Features
 
+### Authentication & Security
+
+* User Registration
+* Email OTP Verification
+* Secure Login and Logout
+* JWT Authentication
+* HTTP-only Cookie Storage
+* Forgot Password Flow
+* Password Reset Functionality
+* Protected Routes
+
 ### Transaction Management
-- Add income and expense transactions
-- Categorize transactions
-- View transaction history
-- Delete transactions
+
+* Add income transactions
+* Add expense transactions
+* Categorize transactions
+* View transaction history
+* Delete transactions
 
 ### Financial Overview
-- Current Balance
-- Total Income Tracking
-- Total Expense Tracking
-- Savings Monitoring
+
+* Current Balance Tracking
+* Total Income Tracking
+* Total Expense Tracking
+* Savings Monitoring
 
 ### Analytics Dashboard
-- Monthly Spending Analytics
-- Category-wise Expense Distribution
-- Spending Trend Visualizations
-- Interactive Charts
+
+* Monthly Spending Analytics
+* Category-wise Expense Distribution
+* Spending Trend Visualizations
+* Interactive Charts
 
 ### Search & Filtering
-- Search Transactions
-- Filter Transactions by Type
-- Dynamic Transaction Views
 
-### Data Persistence
-- Local Storage Integration
-- Automatic Data Retention Across Sessions
+* Search Transactions
+* Filter Transactions by Type
+* Dynamic Transaction Views
 
 ### User Experience
-- Real-Time Updates
-- Dynamic Rendering
-- Clean and Intuitive Interface
+
+* Real-Time Updates
+* Persistent User Sessions
+* Dynamic Rendering
+* Clean and Intuitive Interface
+* Dark/Light Theme Support
 
 ---
 
 ## Tech Stack
 
-**Frontend**
+### Frontend
 
 * React.js
 * JavaScript (ES6+)
 * CSS3
+* Context API
 
-**Data Visualization**
+### Backend
+
+* Node.js
+* Express.js
+
+### Database
+
+* MongoDB
+* Mongoose
+
+### Authentication
+
+* JSON Web Tokens (JWT)
+* HTTP-only Cookies
+* OTP Verification System
+
+### Data Visualization
 
 * Recharts
 
-**Deployment**
+### Deployment
 
-* Vercel
+* Vercel (Frontend)
+* Render (Backend)
 
-**Version Control**
+### Version Control
 
-* Git & GitHub
+* Git
+* GitHub
 
 ---
 
@@ -100,54 +136,96 @@ git clone https://github.com/TechTrooper05/Personal-Finance-Management-Platform.
 ### Navigate to the Project Directory
 
 ```bash
-cd Personal-Finance-Management-Platform-main
+cd Personal-Finance-Management-Platform
 ```
 
 ### Install Dependencies
+
+#### Frontend
 
 ```bash
 npm install
 ```
 
-### Start Development Server
+#### Backend
+
+```bash
+cd backend
+npm install
+```
+
+---
+
+## Environment Variables
+
+### Backend `.env`
+
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+EMAIL_USER=your_email
+EMAIL_PASS=your_email_password
+CLIENT_URL=http://localhost:3000
+NODE_ENV=development
+```
+
+### Frontend `.env`
+
+```env
+REACT_APP_API_URL=http://localhost:5000
+```
+
+---
+
+## Running the Application
+
+### Start Backend Server
+
+```bash
+npm run dev
+```
+
+### Start Frontend
 
 ```bash
 npm start
-```
-
-### Create Production Build
-
-```bash
-npm run build
 ```
 
 ---
 
 ## Future Enhancements
 
-- Budget Management System
-- Savings Goal Tracking
-- User Authentication & User Profiles
-- Cloud Database Integration
-- Multi-Device Data Synchronization
-- Advanced Financial Analytics & Forecasting
-- AI-Powered Spending Insights
-- Export Reports (PDF/CSV)
-- Progressive Web App (PWA) Support
-- Responsive Design for Mobile and Tablet Devices
+* Budget Management System
+* Savings Goal Tracking
+* Recurring Transactions
+* AI-Powered Spending Insights
+* Financial Forecasting
+* Export Reports (PDF/CSV)
+* Progressive Web App (PWA) Support
+* Multi-Device Data Synchronization
+* Notifications and Reminders
 
 ---
 
 ## Screenshots
 
-* Dashboard
+### Dashboard
+
 ![Dashboard](DashboardSS.png)
-* Transaction Management
+
+### Transaction Management
+
 ![Transactions Page](TransactionPageSS.png)
-* Analytics Section
+
+### Analytics
+
 ![Analytics Page 1](SpendingAnalyticsSS1.png)
+
 ![Analytics Page 2](SpendingAnalyticsSS2.png)
-* Financial Overview
+
+### Financial Overview
+
 ![Financial Overview](FinancialOverviewSS.png)
 
 ---
@@ -156,12 +234,15 @@ npm run build
 
 This project helped strengthen my understanding of:
 
-* React Component Architecture
-* State Management
+* Full-Stack Application Development
+* REST API Development
+* Authentication and Authorization
+* JWT and Cookie-Based Sessions
+* MongoDB Data Modeling
+* React State Management
 * Data Visualization
-* Dynamic Rendering
-* Frontend Development Best Practices
-* Application Deployment
+* Deployment Workflows
+* Production Debugging
 * Git and GitHub Workflow
 
 ---
