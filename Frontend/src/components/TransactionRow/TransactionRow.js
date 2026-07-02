@@ -1,5 +1,5 @@
 import './TransactionRow.css';
-import axios from 'axios';
+import api from "../../Utils/api";
 import toast from "react-hot-toast";
 
 function TransactionRow({transaction, setTransactions, isdelete}) {
