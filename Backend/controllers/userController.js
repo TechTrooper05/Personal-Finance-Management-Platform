@@ -100,7 +100,7 @@ const loginUser = async (req, res) => {
         res.cookie("token", token, {
             httpOnly: true,
             secure: process.env.NODE_ENV === "production",
-            sameSite: "strict"
+            sameSite: "none"
         });
 
         res.status(200).json({
@@ -295,7 +295,7 @@ const verifyOtp = async (req, res) => {
             res.cookie("token", token, {
                 httpOnly: true,
                 secure: process.env.NODE_ENV === "production",
-                sameSite: "strict"
+                sameSite: "none"
             });
 
             await Otp.deleteOne({
