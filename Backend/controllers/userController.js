@@ -8,7 +8,6 @@ const Otp = require("../src/models/otp.model");
 
 
 const registerUser = async (req, res) => {
-    console.log(req.body);
     try {
         const {username, email, password} = req.body;
         if (!username || !email || !password) {
@@ -17,8 +16,6 @@ const registerUser = async (req, res) => {
             });
         }
         const normalizedEmail = email.toLowerCase();
-        console.log("Normalized Email:", normalizedEmail);
-        console.log("Is Valid:", validator.isEmail(normalizedEmail));
         if(!validator.isEmail(normalizedEmail)) {
             return res.status(400).json({
                 message: "Please enter a valid email address"
@@ -114,7 +111,6 @@ const loginUser = async (req, res) => {
 }
 
 const logoutUser = (req, res) => {
-    console.log("Logout route hit");
     res.clearCookie("token", {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
@@ -135,7 +131,7 @@ const getCurrentUser = (req, res) => {
 };
 
 const sendOtp = async (req, res) => {
-
+    console.log("sendOtp controller called");
     const {email, purpose} = req.body;
     if (!email || !purpose) {
         return res.status(400).json({
@@ -209,7 +205,6 @@ const sendOtp = async (req, res) => {
         });
 
     } catch (error) {
-        console.log(error);
         await Otp.deleteMany({ email: normalizedEmail });
 
         return res.status(500).json({
