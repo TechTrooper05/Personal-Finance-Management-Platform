@@ -22,13 +22,14 @@ transporter.verify((error, success) => {
 const sendEmail = async (to, subject, html) => {
     try {
         const info = await transporter.sendMail({
-        from: `"FinTrack" <${process.env.EMAIL_USER}>`, // sender address
+        from: `"FinTrack" <${process.env.GOOGLE_USER}>`, // sender address
         to, // list of receivers
         subject, // Subject line
         html, // html body
         });
     } catch (error) {
         console.error('Error sending email:', error);
+        throw error;
     }
 };
 
