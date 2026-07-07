@@ -47,7 +47,7 @@ function Dashboard({transactions, setTransactions, showForm, setShowForm}) {
         ))} 
         <div className="transaction-buttons">
           <button className="add-transaction-button" onClick={()=>setShowForm(true)}>Add</button>
-          <button className="delete-transaction-button" onClick={deleteTransactionTrigger}>Delete</button>
+          <button className="delete-transaction-button" onClick={deleteTransactionTrigger}>{isdelete?"Close":"Delete"}</button>
         </div>
       </div>
       {showForm && <TransactionForm transactions={transactions} setTransactions={setTransactions} balanceAmount={balanceAmount} showForm={showForm} setShowForm={setShowForm}/>}

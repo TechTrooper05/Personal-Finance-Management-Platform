@@ -111,7 +111,7 @@ function TransactionForm({setTransactions, balanceAmount, setShowForm}) {
         <div className="row-2">
           <div className="column1">
             <p className='transaction-form-text'>Amount</p>
-            <input type="number" value={amount} onChange={(e)=>{setAmount(e.target.value)}}/>
+            <input type="number" placeholder='Enter Amount' value={amount} onChange={(e)=>{setAmount(e.target.value)}}/>
           </div>
           <div className="column2">
             <p className='transaction-form-text column2-content'>Date</p>

@@ -178,25 +178,19 @@ const Landing = () => {
 
                     <div className="nav-right">
                         <button
-                            className="btn-theme"
+                            className={`btn-theme ${theme === "dark-purple" ? "dark" : "light"}`}
                             id="themeToggle"
                             onClick={toggleTheme}
                         >
-                            {
-                                theme === "dark-purple"
-                                    ? "✨ Light Mode"
-                                    : "🔮 Dark Mode"
-                            }
+                            <span className="toggle-slider toggle-text">
+                                {theme === "dark-purple" ? "🌙" : "☀️"}
+                            </span>
                         </button>
 
                         <a
                             href="#authSection"
                             onClick={() => setActiveTab("login")}
                             className="btn btn-secondary"
-                            style={{
-                                padding: "8px 16px",
-                                fontSize: "0.85rem"
-                            }}
                         >
                             Sign In
                         </a>
@@ -257,43 +251,6 @@ const Landing = () => {
                 </div>
             </section>
 
-            {/* Engineered Differently Section */}
-            {/* <section className="why-us">
-                <div className="container">
-                    <h2 className="section-title" style={{ marginBottom: '50px' }}>Engineered Differently</h2>
-                    
-                    <div className="grid-2">
-                        <div className="why-item">
-                            <div className="why-icon"></div>
-                            <div>
-                                <h3>Simple and intuitive UI</h3>
-                                <p>Zero bloatware. Just smooth, minimalist visuals focused clean layout metrics.</p>
-                            </div>
-                        </div>
-                        <div className="why-item">
-                            <div className="why-icon"></div>
-                            <div>
-                                <h3>Secure JWT Authentication</h3>
-                                <p>State-of-the-art encrypted token safety barriers shield transactional tracking privacy data.</p>
-                            </div>
-                        </div>
-                        <div className="why-item">
-                            <div className="why-icon"></div>
-                            <div>
-                                <h3>Real-time Overview</h3>
-                                <p>Instantly responsive. Watch balances dynamically shift across structural data interfaces.</p>
-                            </div>
-                        </div>
-                        <div className="why-item">
-                            <div className="why-icon"></div>
-                            <div>
-                                <h3>Students & Professionals</h3>
-                                <p>Flexible parameter frameworks adjusting effortlessly to small personal budgets or robust active careers.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section> */}
             <section className="why-us">
                 <div className="container">
                     <h2

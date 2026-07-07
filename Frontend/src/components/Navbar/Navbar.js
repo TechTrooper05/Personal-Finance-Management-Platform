@@ -48,7 +48,7 @@ function Navbar() {
       setIsAuthenticated(false);
       navigate("/"); // landing page
     } catch (err) {
-      toast.error(err);
+      toast.error(err.response?.data?.message || "Logout failed");
     }
   };
   return (

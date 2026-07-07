@@ -13,14 +13,10 @@
     z-index: 1000;
 }
  .transactionForm-container {
-    height: 80%;
-    width: 40%;
-
-    /* background-color: #F4F9E9; */
-    background-color: lavender;
-    box-shadow: 0 0 10px #a855f7,
-            0 0 20px #a855f7,
-            0 0 40px #a855f7;
+    height: 75%;
+    width: 35%;
+    background-color: var(--surface);
+    box-shadow: 0 0 40px var(--primary-hover);
     position: relative;
     z-index: 1001;
 
@@ -43,13 +39,13 @@
     padding-top: 2rem;
     font-size: 2.75rem;
     font-weight: 600;
-    color: #241139;
+    color: var(--text-main);
 }
 .transaction-form-text {
     width: 80%;
     font-size: 1.3rem;
     margin-bottom: 0.25rem;
-    color: #241139;
+    color: var(--text-muted);
 }
 .row-1 {
     height: 15%;
@@ -94,22 +90,27 @@
     border-radius: 2vh;
     border: 0 solid transparent;
     padding-left: 0.75rem;
+    background-color: rgb(237, 204, 254);
+    /* color: black; */
 }
 .description-box {
     height: 60%;
     width: 100%;
 }
 .row-4 button {
-    color: #241139;
+    color: var(--text-muted);
     height: 40%;
     width: 20%;
     border-radius: 1rem;
-    background-color: #fae4f2;
+    background-color: var(--surface-muted);
     border: 1px solid;
-    border-color: #241139;
+    border-color: var(--border);
 
 }
 .column2-content {
     width: 90%;
     margin-left: auto;
+}
+.transactionForm-container input::placeholder {
+    color: black;
 }
