@@ -31,12 +31,19 @@ function SpendingAnalytics({transactions}) {
         ]
     );
     const categoryData = transactions.reduce((acc, transaction) => {
-        if (transaction.type === "Expense") {
+    const transactionDate = new Date(transaction.date);
+
+        if (
+            transaction.type === "Expense" &&
+            transactionDate.getMonth() === currentMonth &&
+            transactionDate.getFullYear() === currentYear
+        ) {
             if (!acc[transaction.category]) {
                 acc[transaction.category] = 0;
             }
             acc[transaction.category] += Number(transaction.amount);
         }
+
         return acc;
     }, {});
     const currentMonthExpense = monthlyExpenses[currentMonth].expense;
