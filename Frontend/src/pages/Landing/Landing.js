@@ -123,9 +123,9 @@ const Landing = () => {
             setLoading(false);
         }
     };
-    const forgotPasswordTrigger = () => {
-        navigate("/forgot-password");
-    }
+    // const forgotPasswordTrigger = () => {
+    //     navigate("/forgot-password");
+    // }
     const handleRegisterSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
@@ -138,7 +138,7 @@ const Landing = () => {
                 }
             );
 
-            const userEmail = response?.data?.user?.email;
+            // const userEmail = response?.data?.user?.email;
 
             if (response.status === 201) {
                 // await api.post(
