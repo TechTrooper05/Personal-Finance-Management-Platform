@@ -166,7 +166,7 @@ function Settings() {
                                     <div className="profile-email-text">{user.email}</div>
                                 </div>
                                 <div className="profile-email-right">
-                                    <button onClick={() => setActiveForm("email")}>Change Email</button>
+                                    <button disabled onClick={() => setActiveForm("email")}>Change Email</button>
                                 </div>
                             </>
                         ) : (

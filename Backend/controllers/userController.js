@@ -36,9 +36,22 @@ const registerUser = async (req, res) => {
         const hashed = await bcrypt.hash(password, 10);
 
         const userDetails = await user.create({username, email: normalizedEmail, password:hashed, isVerified:false});
-
+        const token = jwt.sign(
+            {
+                id: userDetails._id
+            },
+            process.env.JWT_SECRET,
+            {
+                expiresIn: "1d"
+            }
+        );
+        res.cookie("token", token, {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === "production",
+            sameSite: process.env.NODE_ENV === "production" ? "none" : "lax"
+        });
         res.status(201).json({
-            message: "Registration success! Please verify your email",
+            message: "Registration success!", //Please Verify your email
             user: {
                 username: userDetails.username,
                 email: userDetails.email,
@@ -73,16 +86,16 @@ const loginUser = async (req, res) => {
                 message: "Invalid credentials!"
             })
         }
-        if (!userExists.isVerified){
-            return res.status(403).json({
-                message: "Email not verified. Please verify your email.",
-                user: {
-                    username: userExists.username,
-                    email: userExists.email,
-                    isVerified: userExists.isVerified
-                }
-            })
-        }
+        // if (!userExists.isVerified){
+        //     return res.status(403).json({
+        //         message: "Email not verified. Please verify your email.",
+        //         user: {
+        //             username: userExists.username,
+        //             email: userExists.email,
+        //             isVerified: userExists.isVerified
+        //         }
+        //     })
+        // }
 
         const token = jwt.sign(
             {
@@ -97,7 +110,7 @@ const loginUser = async (req, res) => {
         res.cookie("token", token, {
             httpOnly: true,
             secure: process.env.NODE_ENV === "production",
-            sameSite: "none"
+            sameSite: process.env.NODE_ENV === "production" ? "none" : "lax"
         });
 
         res.status(200).json({
@@ -114,7 +127,7 @@ const logoutUser = (req, res) => {
     res.clearCookie("token", {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
-        sameSite: "none"
+        sameSite: process.env.NODE_ENV === "production" ? "none" : "lax"
     });
 
     res.status(200).json({
@@ -295,7 +308,7 @@ const verifyOtp = async (req, res) => {
             res.cookie("token", token, {
                 httpOnly: true,
                 secure: process.env.NODE_ENV === "production",
-                sameSite: "none"
+                sameSite: process.env.NODE_ENV === "production" ? "none" : "lax"
             });
 
             await Otp.deleteOne({

@@ -141,22 +141,23 @@ const Landing = () => {
             const userEmail = response?.data?.user?.email;
 
             if (response.status === 201) {
-                await api.post(
-                    "/api/auth/send-otp",
-                    {
-                        email: userEmail,
-                        purpose: "register"
-                    },
-                    {
-                        withCredentials: true
-                    }
-                )
-                navigate("/verify-otp", {
-                    state: {
-                        email: userEmail,
-                        purpose: "register"
-                    }
-                });
+                // await api.post(
+                //     "/api/auth/send-otp",
+                //     {
+                //         email: userEmail,
+                //         purpose: "register"
+                //     },
+                //     {
+                //         withCredentials: true
+                //     }
+                // )
+                // navigate("/verify-otp", {
+                //     state: {
+                //         email: userEmail,
+                //         purpose: "register"
+                //     }
+                // });
+                setIsAuthenticated(true);
             }
 
         } catch (error) {
@@ -418,9 +419,9 @@ const Landing = () => {
                                     required
                                 />
                             </div>
-                            <button type="button"
+                            {/* <button type="button" disabled
                             className="forgot-password"
-                            onClick={forgotPasswordTrigger}>Forgot Password</button>
+                            onClick={forgotPasswordTrigger}><p>Forgot Password? Use your local device to enable this feature</p></button> */}
                             <button
                                 type="submit"
                                 className="form-btn"
